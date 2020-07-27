@@ -1,0 +1,31 @@
+{
+  "name": "webComponent-prettyprint",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "debug": "webpack -d",
+    "build": "webpack",
+    "watch": "webpack -w",
+    "start": "webpack-dev-server -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nobokko/WebComponent-Prettyprint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nobokko/WebComponent-Prettyprint/issues"
+  },
+  "homepage": "https://github.com/nobokko/WebComponent-Prettyprint#readme",
+  "devDependencies": {
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "ts-loader": "^8.0.1",
+    "typescript": "^3.9.7"
+  }
+}
