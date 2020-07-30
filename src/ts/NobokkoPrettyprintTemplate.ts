@@ -23,11 +23,45 @@ div {
 ::slotted([slot="source"]) {
     white-space : pre;
 }
+#source {
+    counter-reset: line;
+}
+nobokko-prittyprint-line {
+    display: block;
+    position: relative;
+    padding: 0 0 0 5em;
+    font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+}
+nobokko-prittyprint-line:before {
+    font-size: 1em;
+    counter-increment: line;
+    content: "" attr(data-display-prefix) "";
+    margin: 0 1em 0 0;
+    padding: 0 1em 0 0;
+    width: 3em;
+    display:inline-block;
+    position: absolute;
+    height: 100%;
+    left: 0;
+    text-align: right;
+}
+nobokko-prittyprint-line:nth-child(odd) {
+    background-color: #222222;
+}
+nobokko-prittyprint-line:nth-child(even) {
+    background-color: #111111;
+}
+nobokko-prittyprint-line:nth-child(odd):before {
+    background-color: #444444;
+}
+nobokko-prittyprint-line:nth-child(even):before {
+    background-color: #333333;
+}
 </style>
 <root>
 <h1><slot name="filename">filename</slot></h1>
-<div>
-<slot name="source"></slot>
+<div id="source">
+<slot name="source" style="display:none;"></slot>
 </div>
 </root>
 `;
