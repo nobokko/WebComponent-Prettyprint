@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = {
   // モードの設定、v4系以降はmodeを指定しないと、webpack実行時に警告が出る
-  // mode: 'production',
-  mode: 'development',
+  mode: 'production',
+  // mode: 'development',
   devtool: "source-map",
   module: {
     rules: [

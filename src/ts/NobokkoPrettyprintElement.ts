@@ -34,9 +34,9 @@ export default class NobokkoPrettyprintElement extends HTMLElement {
     rewrite() : void {
         const shadowRoot = this.shadowRoot ?? this.attachShadow({ mode: 'open' });
         shadowRoot.innerHTML = NobokkoPrettyprintTemplate;
-        console.log('' + this.filename);
-        console.log('' + this.source);
-        console.log('' + this.displayLine);
+        // console.log('' + this.filename);
+        // console.log('' + this.source);
+        // console.log('' + this.displayLine);
         // for (let shadowRootStyleSheet of shadowRoot.styleSheets) {
         //     for (let shadowRootStyleSheetCssRules of shadowRootStyleSheet.cssRules) {
         //         if (shadowRootStyleSheetCssRules instanceof CSSStyleRule) {
