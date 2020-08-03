@@ -12,13 +12,13 @@ root{
 h1 {
     margin:0;
 }
-div {
+div#source {
     color: #ffffff;
     background-color: #000000;
     border-radius: 1em;
     box-shadow: 0 1em 1em 0 rgba(0, 0, 64, .2);
     padding:1em;
-    margin: 1em;
+    overflow: auto;
 }
 ::slotted([slot="source"]) {
     white-space : pre;
@@ -26,11 +26,16 @@ div {
 #source {
     counter-reset: line;
 }
+nobokko-prittyprint-comment {
+    color: #408080;
+}
 nobokko-prittyprint-line {
     display: block;
     position: relative;
     padding: 0 0 0 5em;
     font-family: Consolas, 'Courier New', Courier, Monaco, monospace;
+    word-break: break-all;
+    white-space: normal;
 }
 nobokko-prittyprint-line:before {
     font-size: 1em;
@@ -44,6 +49,14 @@ nobokko-prittyprint-line:before {
     height: 100%;
     left: 0;
     text-align: right;
+}
+nobokko-prittyprint-line:first-of-type,
+nobokko-prittyprint-line:first-of-type:before {
+    border-radius: 1em 0 0 0;
+}
+nobokko-prittyprint-line:last-of-type,
+nobokko-prittyprint-line:last-of-type:before {
+    border-radius: 0 0 0 1em;
 }
 nobokko-prittyprint-line:nth-child(odd) {
     background-color: #222222;
